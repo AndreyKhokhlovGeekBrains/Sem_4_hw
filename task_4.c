@@ -11,16 +11,16 @@
 // Данные на выходе: 287
 
 #include <stdio.h>
+int MULTIPLIER = 10;
 
 int main(void) {
     int myNum, reversedNum = 0;
     printf("Enter a number:\n");
     scanf("%d", &myNum);
-
-    int multiplier = 10;
+    
     while (myNum > 0)
     {
-        reversedNum = reversedNum * multiplier + (myNum % 10);
+        reversedNum = reversedNum * MULTIPLIER + (myNum % 10);
         myNum /= 10;
     }
     printf("%d", reversedNum);
